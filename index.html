@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高吉清潔公司-烏材林每日工作目標</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>高吉清潔公司-烏材林每日工作目標</h1>
+        <textarea id="goalInput" placeholder="輸入今日工作目標"></textarea>
+        
+        <h2>選擇照片</h2>
+        <!-- 隱藏文件輸入框 -->
+        <input type="file" id="photoInput" accept="image/*" multiple>
+        
+        <!-- 使用 label 按鈕來觸發文件選擇框 -->
+        <label for="photoInput" class="upload-btn">選擇照片</label>
+
+        <div id="selectedPhotos">
+            <h3>已選擇的照片：</h3>
+            <div id="photoPreviews"></div>
+        </div>
+
+        <button onclick="uploadPhotos()">上傳到後台</button>
+
+        <h2>上傳的照片</h2>
+        <div id="uploadedPhotos">
+            <!-- 上傳的照片會根據月份和日期顯示 -->
+        </div>
+        
+        <button onclick="clearStorage()">清除儲存資料</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

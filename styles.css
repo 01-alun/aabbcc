@@ -1,0 +1,185 @@
+/* 基本樣式 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* 標題 */
+h1, h2 {
+    font-size: 1.5rem;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* 工作目標輸入框 */
+textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    resize: none;
+    box-sizing: border-box;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 4px rgba(76, 175, 80, 0.5);
+}
+
+/* 按鈕樣式 */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #b5e5a3;
+    cursor: not-allowed;
+}
+
+/* 上傳照片區域 */
+input[type="file"] {
+    display: none;
+}
+
+label.upload-btn {
+    display: block;
+    margin: 20px 0;
+    padding: 12px;
+    text-align: center;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+label.upload-btn:hover {
+    background-color: #0056b3;
+}
+
+#selectedPhotos {
+    margin-top: 20px;
+}
+
+/* 顯示預覽圖片區 */
+#photoPreviews {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#photoPreviews img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+#photoPreviews img:hover {
+    transform: scale(1.1);
+}
+
+/* 照片條列區 */
+#uploadedPhotos {
+    margin-top: 20px;
+}
+
+.uploaded-photo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.uploaded-photo img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.download-btn {
+    padding: 8px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.download-btn:hover {
+    background-color: #45a049;
+}
+
+.delete-btn {
+    padding: 8px;
+    background-color: #FF4C4C;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.delete-btn:hover {
+    background-color: #e03c3c;
+}
+
+/* 響應式設計 */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    textarea {
+        font-size: 1.2rem;
+    }
+    button {
+        font-size: 1.2rem;
+    }
+    label.upload-btn {
+        font-size: 1.2rem;
+    }
+}
